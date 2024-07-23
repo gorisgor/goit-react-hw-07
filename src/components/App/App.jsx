@@ -1,7 +1,8 @@
 import ContactForm from "../ContactForm/ContactForm";
 import SearchBox from "../SearchBox/SearchBox";
 import ContactList from "../ContactList/ContactList";
-import Loader from "../Loader/Loader"
+import Loader from "../Loader/Loader";
+import Error from "../Error/Error";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchContacts } from "../../redux/contactsOps";
@@ -11,9 +12,8 @@ import css from "./App.module.css";
 
 export default function App() {
   const dispatch = useDispatch();
-  const contacts = useSelector((state) => state.contacts.items);
-  const loading = useSelector((state) => state.tasks.loading);
-  const isError = useSelector((state) => state.tasks.error);
+  const loading = useSelector((state) => state.contacts.loading);
+  const isError = useSelector((state) => state.contacts.error);
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -24,8 +24,8 @@ export default function App() {
       <h1>Phonebook</h1>
       <ContactForm />
       <SearchBox />
-      {loading && <Loader>Loading message</Loader>}
-      {isError && <Error>Error message</Error>}
+      {loading && <Loader />}
+      {isError && <Error />}
       <ContactList  />
     </div>
   );
