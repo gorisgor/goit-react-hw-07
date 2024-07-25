@@ -1,4 +1,9 @@
 .container {
-  max-width: 1158px;
+  max-width: 1458px;
   padding: 0 70px;
+}
+
+.header {
+  color: rgb(0, 174, 255);
+  text-align: center;
 }

@@ -16,8 +16,6 @@ const contactSchema = Yup.object().shape({
     .required("A phone number is required"),
 });
 
-
-
 export default function ContactForm() {
   const dispatch = useDispatch();
 

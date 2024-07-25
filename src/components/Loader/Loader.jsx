@@ -1,20 +1,18 @@
-import { LineWave } from "react-loader-spinner";
+import { BallTriangle } from "react-loader-spinner";
 import css from "./Loader.module.css";
 
 export default function Loader() {
   return (
     <div className={css.loader}>
-      <LineWave
-  visible={true}
-  height="50"
-  width="50"
-  color="#4fa94d"
-  ariaLabel="line-wave-loading"
+      <BallTriangle
+  height={100}
+  width={100}
+  radius={5}
+  color="#ff7d00"
+  ariaLabel="ball-triangle-loading"
   wrapperStyle={{}}
   wrapperClass=""
-  firstLineColor=""
-  middleLineColor=""
-  lastLineColor=""
+  visible={true}
   />
     </div>
   );

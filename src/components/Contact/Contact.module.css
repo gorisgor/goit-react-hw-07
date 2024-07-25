@@ -3,7 +3,7 @@
   justify-content: space-between;
   padding: 5px;
   gap: 10px;
-  max-width: 380px;
+  min-width: 500px;
   border: 1px solid black;
   border-radius: 5px;
 }
@@ -15,11 +15,12 @@
 }
 
 .btn {
-  min-width: 49px;
-  height: 20px;
+  min-width: 55px;
+  padding: 3px;
+  height: 28px;
   font-size: 18px;
   border: none;
-  background-color: gray;
+  background-color: rgb(0, 174, 255);
   color: #fff;
   cursor: pointer;
   border-radius: 4px;
@@ -27,8 +28,12 @@
   align-self: center;
 }
 .btn:hover {
-  background-color: darkgray;
+  background-color: #ff7d00;
 }
 .btn:focus {
-  background-color: darkgray;
+  background-color: #ff7d00;
+}
+
+.icon {
+  color:rgb(0, 174, 255);
 }
